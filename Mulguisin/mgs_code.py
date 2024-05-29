@@ -5,7 +5,7 @@ from numba.typed import List
 @njit
 def mgs3d(Rcut,x1,y1,z1,isort):
     
-	t_start = time()
+#	t_start = time()
     
 	Nmgs=0
 	imgs = List()
@@ -44,8 +44,8 @@ def mgs3d(Rcut,x1,y1,z1,isort):
 			cng.append(1)
 			Nmgs+=1
     
-	t_end = time()
-	print('Calculation is done. Time = ',t_end - t_start)
+#	t_end = time()
+#	print('Calculation is done. Time = ',t_end - t_start)
     
 	return Nmgs,imgs,clg,clm,cng
 
@@ -105,4 +105,6 @@ def mgs3d_period(Rcut,x1,y1,z1,isort,Lbox):
 			clm.append([ic])
 			cng.append(1)
 			Nmgs+=1
+#	t_end = time()
+#	print('Calculation is done. Time = ',t_end - t_start)
 	return Nmgs,imgs,clg,clm,cng
