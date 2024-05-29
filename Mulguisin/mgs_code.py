@@ -2,7 +2,6 @@ from numba import njit
 from numba.typed import List
 
 @njit
-@njit
 def mgs3d(Rcut,x1,y1,z1,isort):
     
 #	t_start = time()
